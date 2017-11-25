@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <title>Un dashboard avec Bootstrap 4</title>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/style.css">
+  </head>
+
+  <body>
+
+    <header>
+
+      <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="#">
+          <i class="fa fa-circle-o" aria-hidden="true"></i>
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="#">Derniers accès</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Mon espace</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Options
+              </a>
+              <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+                <a class="dropdown-item" href="#">
+                  <i class="fa fa-user" aria-hidden="true"></i> Profil
+                </a>
+                <a class="dropdown-item" href="#">
+                  <i class="fa fa-cog" aria-hidden="true"></i> Paramètres
+                </a>
+                <a class="dropdown-item" href="#">
+                  <i class="fa fa-power-off" aria-hidden="true"></i> Déconnexion
+                </a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item" href="#">
+                  <i class="fa fa-question-circle" aria-hidden="true"></i> Besoin d'aide
+                </a>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </nav>
+
+      <div class="container">
+        <div class="row">
+          <ul class="nav nav-pills">
+            <li class="nav-item">
+              <a class="nav-link active" href="#">
+                Accueil
+                <span class="visible">&nbsp;2&nbsp;</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">
+                Urgences
+                <span class="visible">&nbsp;4&nbsp;</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">
+                Notifications
+                <span class="notvisible">&nbsp;0&nbsp;</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">
+                Messagerie
+                <span class="visible">&nbsp;3&nbsp;</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">
+                Calendrier
+                <span class="notvisible">&nbsp;0&nbsp;</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+    </header>
+
+    <div id="content" class="container">
+
+      <div class="row">
+
+        <nav id="left-panel" class="col-3">
+          <div class="card">
+            <div class="card-body">
+
+              <ul class="list-group list-group-flush">
+                <li id="search-bar" class="list-group-item">
+                  <div class="input-group">
+                    <span class="input-group-addon" id="basic-addon1">
+                      <i class="fa fa-search" aria-hidden="true"></i>
+                    </span>
+                    <input type="text" class="form-control" placeholder="" aria-label="Username" aria-describedby="basic-addon1">
+                    <span class="input-group-btn">
+                      <button class="btn btn-secondary" type="button">Go!</button>
+                    </span>
+                  </div>
+                </li>
+
+
+                <li class="list-group-item">
+                  <h4 class="card-title">Par secteurs</h4>
+                  <ul class="list-group list-group-flush">
+                    <li class="list-group-item"><a href="#" class="card-link current">Boutique</a></li>
+                    <li class="list-group-item"><a href="#" class="card-link">Clients</a></li>
+                    <li class="list-group-item"><a href="#" class="card-link">Commandes</a></li>
+                    <li class="list-group-item"><a href="#" class="card-link">Livraisons</a></li>
+                    <li class="list-group-item"><a href="#" class="card-link">Litiges</a></li>
+                  </ul>
+                </li>
+
+                <li class="list-group-item">
+                  <h4 class="card-title">Outils</h4>
+                  <ul class="list-group list-group-flush">
+                    <li class="list-group-item"><a href="#" class="card-link">Rapports</a></li>
+                    <li class="list-group-item"><a href="#" class="card-link">Statistiques</a></li>
+                    <li class="list-group-item"><a href="#" class="card-link">Signaler...</a></li>
+                    <li class="list-group-item"><a href="#" class="card-link">Imprimer...</a></li>
+                    <li class="list-group-item"><a href="#" class="card-link">Exporter...</a></li>
+                  </ul>
+                </li>
+
+              </ul>
+            </div>
+
+          </div>
+        </nav>
+
+        <main class="col-9 col-lg-6">
+          <div id="main-table">
+            <nav class="navbar navbar-light bg-light">
+              <span class="navbar-brand">
+                Derniers produits
+              </span>
+              <nav id="pagination" aria-label="Page navigation example">
+                <ul class="pagination justify-content-end">
+                  <li class="page-item"><a class="page-link" href="#">1</a></li>
+                  <li class="page-item"><a class="page-link" href="#">2</a></li>
+                  <li class="page-item"><a class="page-link" href="#">3</a></li>
+                  <li class="page-item">
+                    <li class="nav-item dropdown">
+                      <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Filtrer
+                      </a>
+                      <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="#">date</a>
+                        <a class="dropdown-item" href="#">abc</a>
+                      </div>
+                    </li>
+                  </li>
+                </ul>
+              </nav>
+            </nav>
+            <table class="table">
+              <thead>
+                <tr>
+                  <th scope="col">#</th>
+                  <th scope="col">REF</th>
+                  <th scope="col">Description</th>
+                  <th scope="col">Quantité</th>
+                  <th scope="col">Prix</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <th scope="row">1</th>
+                  <td>Lorem</td>
+                  <td>ipsum</td>
+                  <td>dolor</td>
+                  <td>sit</td>
+                </tr>
+                <tr>
+                  <th scope="row">2</th>
+                  <td>amet</td>
+                  <td>consectetur</td>
+                  <td>adipisicing</td>
+                  <td>elit</td>
+                </tr>
+                <tr>
+                  <th scope="row">3</th>
+                  <td>Lorem</td>
+                  <td>ipsum</td>
+                  <td>dolor</td>
+                  <td>sit</td>
+                </tr>
+                <tr>
+                  <th scope="row">4</th>
+                  <td>amet</td>
+                  <td>consectetur</td>
+                  <td>adipisicing</td>
+                  <td>elit</td>
+                </tr>
+                <tr>
+                  <th scope="row">5</th>
+                  <td>amet</td>
+                  <td>consectetur</td>
+                  <td>adipisicing</td>
+                  <td>elit</td>
+                </tr>
+                <tr>
+                  <th scope="row">6</th>
+                  <td>Lorem</td>
+                  <td>ipsum</td>
+                  <td>dolor</td>
+                  <td>sit</td>
+                </tr>
+                <tr>
+                  <th scope="row">7</th>
+                  <td>amet</td>
+                  <td>consectetur</td>
+                  <td>adipisicing</td>
+                  <td>elit</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </main>
+
+        <aside class="col-12 col-lg-3">
+          <div class="container-fluid">
+            <div class="row">
+              <div class="card col-4 col-lg-12">
+                <img class="card-img-top" src="https://source.unsplash.com/random" alt="Card image cap">
+                <div class="card-body">
+                  <h4 class="card-title">Thumbnail label</h4>
+                  <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                  <a href="#" class="btn btn-success">Editer</a>
+                  <a href="#" class="btn btn-danger">Plus tard</a>
+                </div>
+              </div>
+              <div class="card col-4 col-lg-12">
+                <img class="card-img-top" src="https://source.unsplash.com/random" alt="Card image cap">
+                <div class="card-body">
+                  <h4 class="card-title">Thumbnail label</h4>
+                  <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                  <a href="#" class="btn btn-success">Editer</a>
+                  <a href="#" class="btn btn-danger">Plus tard</a>
+                </div>
+              </div>
+              <div class="card col-4 col-lg-12">
+                <img class="card-img-top" src="https://source.unsplash.com/random" alt="Card image cap">
+                <div class="card-body">
+                  <h4 class="card-title">Thumbnail label</h4>
+                  <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                  <a href="#" class="btn btn-success">Editer</a>
+                  <a href="#" class="btn btn-danger">Plus tard</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </aside>
+
+      </div>
+
+    </div>
+
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
+  </body>
+
+</html>

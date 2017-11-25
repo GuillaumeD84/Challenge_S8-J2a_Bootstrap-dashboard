@@ -1,0 +1,134 @@
+body {
+  background-color: #a4c0f4;
+}
+
+header .container {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+#content.container {
+  background: white;
+  padding: 1rem;
+  box-shadow: 0 0 1rem black;
+}
+
+/* Nav */
+header .nav.nav-pills span.visible {
+  font-weight: bold;
+  background-color: gray;
+  color: white;
+  border-radius: 50%;
+}
+
+header .nav.nav-pills .active span.visible {
+  background-color: white;
+  color: blue;
+}
+
+header .nav.nav-pills span.notvisible {
+  display: none;
+}
+
+.current {
+  font-weight: bold;
+}
+
+/* left navigation panel */
+.list-group-flush .list-group-item {
+  padding-left: 0;
+  padding-right: 0;
+}
+
+#content .card-body {
+  padding-top: 0;
+}
+
+#content .card {
+  border-top: none;
+  border-left: none;
+  border-right: none;
+}
+
+#search-bar {
+  padding-top: 0;
+}
+
+#left-panel {
+  margin-bottom: 10px;
+}
+
+.list-group-flush .list-group-item .list-group-flush .list-group-item {
+  border-bottom: 0;
+  border-top: 0;
+}
+
+#left-panel .card-title {
+  font-size: 1rem;
+  text-transform: uppercase;
+  font-weight: bold;
+  margin-bottom: 0;
+}
+
+.list-group-flush .list-group-item a {
+  padding-left: 1rem;
+}
+
+/* Main */
+#main-table {
+  border: 1px solid gray;
+  border-radius: 4px;
+}
+
+#main-table table {
+  margin-bottom: 0;
+}
+
+#main-table #pagination {
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+main nav ul {
+  margin-bottom: 0;
+}
+
+#main-table ul.pagination {
+  background-color: white;
+}
+
+#main-table ul.pagination a {
+  border-top: none;
+  border-bottom: none;
+}
+
+#main-table ul.pagination a.page-link {
+  line-height: 1.5;
+}
+
+#main-table ul a {
+  height: 2.5rem;
+}
+
+#main-table ul a.dropdown-toggle {
+  padding-right: 8px;;
+}
+
+/* Aside */
+aside .card {
+  margin-bottom: 10px;
+}
+
+aside .card-body {
+  padding: 10px;
+}
+
+aside .card-img-top {
+  padding-top: 10px;
+}
+
+@media screen and (min-width: 992px) {
+  aside .card-img-top:first-child {
+    padding-top: 0;
+  }
+}
